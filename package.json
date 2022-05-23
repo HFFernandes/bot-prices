@@ -1,0 +1,16 @@
+{
+  "name": "price-oscillations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Hugo Fernandes",
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jest": "^28.1.0",
+    "time-stamp": "^2.2.0"
+  }
+}
