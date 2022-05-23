@@ -8,6 +8,9 @@
     "npm": ">=8.0.0",
     "node": ">=14.0.0"
   },
+  "scripts": {    
+    "test": "jest"    
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "jest": "^28.1.0",
