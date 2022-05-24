@@ -8,11 +8,12 @@
     "npm": ">=8.0.0",
     "node": ">=14.0.0"
   },
-  "scripts": {    
-    "test": "jest"    
+  "scripts": {
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "commander": "^9.2.0",
     "jest": "^28.1.0",
     "time-stamp": "^2.2.0"
   }

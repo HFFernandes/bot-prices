@@ -1,6 +1,6 @@
 
 async function processRequest(current, next) {
-        
+
     const changes = await getPercentChange(current.data.bid, next.data.bid)
 
     const percent = (current.percent / 100)
@@ -15,7 +15,6 @@ async function processRequest(current, next) {
     console.log(re);
 }
 
-
 async function getPercentChange(originValue, newValue) {
     const current = parseFloat(originValue)
     const next = parseFloat(newValue)
@@ -26,16 +25,16 @@ async function getPriceDirection(changes, limit) {
     const negative = changes < 0;
     let direction = "NaN"
     if (Math.abs(changes) > limit) {
-        if (negative) {            
+        if (negative) {
             direction = "down";
-        } else {            
+        } else {
             direction = "up";
         }
     }
     return direction
 }
 
-module.exports = { 
+module.exports = {
     processRequest,
     getPercentChange,
     getPriceDirection,

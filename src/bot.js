@@ -1,6 +1,7 @@
 const axios = require('axios');
 const timestamp = require('time-stamp');
 
+const program = require("./utils/arguments")
 const processRequest = require('./services/oscillationService.js');
 
 const mapping = new Map();
@@ -24,12 +25,21 @@ async function getTicker(data) {
         .catch((error) => console.error(error));
 };
 
-const timeout = 5000;
+const percent = program.options.interval;
+const pairs = program.options.pairs;
+const timeout = program.options.interval;
 
-const data = [
-    { "pair": "BTC-USD", "percent": 0.0001 },
-    //{ "pair": "EUR-USD", "percent": 0.0001 },
-]
+var data = []
+pairs.forEach(element => {
+    if (element.includes(':')) {
+        const rateLimit = element.split(":");
+        const ob = { "pair": rateLimit[0], "percent": rateLimit[1] }
+        data.push(ob)
+    } else {
+        const ob = { "pair": element, "percent": percent }
+        data.push(ob)
+    }
+});
 
 async function StartBot() {
     data.forEach(async record => {
