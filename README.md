@@ -1,5 +1,5 @@
 # bot-prices
-A bot that to alert you about price oscillations on a given currency pair
+A bot to alert you about price oscillations on a given currency pair
 
 ## Clone repository
 
