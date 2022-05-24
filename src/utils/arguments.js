@@ -4,9 +4,9 @@ const commander = require('commander');
 commander
   .version('1.0.0', '-v, --version')
   .usage('[OPTIONS]...')
-  .option('-p, --pairs <value...>', 'Currency pairs')
-  .option('-o, --percent <value>', 'Oscillation percentage..')
-  .option('-i, --interval <value>', 'Fetch interval')  
+  .option('-p, --pairs <value...>', 'currency pairs')
+  .option('-o, --percent <value>', 'oscillation percentage', 0)
+  .option('-i, --interval <value>', 'fetch interval', 5000)  
   .parse(process.argv);
 
 const options = commander.opts();
