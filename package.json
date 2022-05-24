@@ -13,8 +13,9 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "commander": "^9.2.0",
+    "commander": "^9.2.0",    
     "jest": "^28.1.0",
-    "time-stamp": "^2.2.0"
+    "time-stamp": "^2.2.0",
+    "winston": "^3.7.2"
   }
 }

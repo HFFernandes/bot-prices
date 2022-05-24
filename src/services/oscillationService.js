@@ -1,3 +1,4 @@
+const logger = require("../utils/create-file")
 
 async function processRequest(current, next) {
 
@@ -12,8 +13,12 @@ async function processRequest(current, next) {
         "alert": percent,
         "direction": direction,
     }
-    console.log(re);
+    if(direction !== "NaN")
+    {       
+        logger.info(re)
+    }
 }
+    
 
 async function getPercentChange(originValue, newValue) {
     const current = parseFloat(originValue)
